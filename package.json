@@ -1,0 +1,15 @@
+{
+  "name": "ttc_puppeteer",
+  "version": "1.0.0",
+  "description": "A js file to automatically visit and feed my camel on teveclub",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ttc_puppeteer"
+  },
+  "author": "hrudolf",
+  "license": "MIT"
+}
