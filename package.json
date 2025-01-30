@@ -11,5 +11,8 @@
     "url": "ttc_puppeteer"
   },
   "author": "hrudolf",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^24.1.1"
+  }
 }
