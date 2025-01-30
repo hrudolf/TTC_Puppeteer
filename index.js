@@ -4,9 +4,10 @@ const puppeteer = require('puppeteer');
     const browser = await puppeteer.launch({ headless: false }); // Set to true to hide browser
     const page = await browser.newPage();
 
-    await page.goto('https://example.com/login'); // Replace with actual URL
+    await page.goto('https://teveclub.hu/login'); // Replace with actual URL
 
-    await page.type('#username', 'yourUsername'); // Replace with actual input field selector
+    await page.type('#focusme', 'yourUsername'); // Replace with actual input field selector
+    await page.keyboard.press('Tab');
     await page.type('#password', 'yourPassword'); // Replace with actual input field selector
     await page.click('#loginButton'); // Replace with actual button selector
 
