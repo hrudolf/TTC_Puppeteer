@@ -43,6 +43,7 @@ const randomGuess = process.env.RANDOM_UPTO;
     const learnButton = await page.$('input[name="learn"]');
     if (learnButton) {
         await learnButton.click();
+        await page.waitForNavigation();
         console.log("- Tanulj szépen, kicsi csillagom!");
     } else {
         console.log("- Ma már tanultam, inkább játsszunk!");
