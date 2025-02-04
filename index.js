@@ -6,7 +6,10 @@ const egyszamtipp = process.env.EGYSZAM;
 const randomGuess = process.env.RANDOM_UPTO;
 
 (async () => {
-    const browser = await puppeteer.launch({ headless: true });
+    const browser = await puppeteer.launch({
+        headless: true,
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
+    });
     const page = await browser.newPage();
 
     await page.goto('https://teveclub.hu');
