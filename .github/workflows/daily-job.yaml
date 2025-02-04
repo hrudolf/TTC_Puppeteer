@@ -6,13 +6,12 @@ on:
 jobs:
   run-script:
     runs-on: ubuntu-latest
-    container: alpine:latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Install Node.js
-        run: apk add --no-cache nodejs npm chromium
+        run: actions/setup-node@v3
 
       - name: Install dependencies
         run: npm install
