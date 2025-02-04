@@ -13,3 +13,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Visit camel
         run: node index.js
+        env:
+          USERNAME: ${{ secrets.USERNAME }}
+          PASSWORD: ${{ secrets.PASSWORD }}
+          EGYSZAM: ${{ secrets.EGYSZAM }}
+          RANDOM_UPTO: ${{ secrets.RANDOM_UPTO }}
