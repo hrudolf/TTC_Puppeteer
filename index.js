@@ -38,7 +38,7 @@ const randomGuess = process.env.RANDOM_UPTO;
     console.log(`- Gazdi, annyira hiányoztál, ${missingFood} napja voltál utoljára itt.`);
     
 
-    await page.goto('https://teveclub.hu/tanit.pet');
+    await page.goto('https://teveclub.hu/tanit.pet', { waitUntil: 'load' });
 
     const learnButton = await page.$('input[name="learn"]');
     if (learnButton) {
@@ -49,7 +49,7 @@ const randomGuess = process.env.RANDOM_UPTO;
         console.log("- Ma már tanultam, inkább játsszunk!");
     }
 
-    await page.goto('https://teveclub.hu/egyszam.pet');
+    await page.goto('https://teveclub.hu/egyszam.pet', { waitUntil: 'load'});
     
     const egyszamButton = await page.$('input[name="tipp"]');
 
