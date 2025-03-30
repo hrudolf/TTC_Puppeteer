@@ -33,12 +33,14 @@ const randomGuess = process.env.RANDOM_UPTO;
             await feedButton.click();    
             await page.waitForNavigation({ waitUntil: 'load' });
         } else {
-            console.log("- Bekészítettem a kajádat a hétre!");
+            if (missingFood > 0) {
+            console.log(`- Bekészítettem neked ${missingFood} a kaját!`);
+            } else {
+                console.log("Nem volt étvágyad? Tele a tálad!")
+            }
             break;
         }
     }
-
-    console.log(`- Gazdi, annyira hiányoztál, ${missingFood} napja voltál utoljára itt.`);
     
 
     await page.goto('https://teveclub.hu/tanit.pet', { waitUntil: 'load' });
