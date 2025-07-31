@@ -34,7 +34,7 @@ const randomGuess = process.env.RANDOM_UPTO;
             await page.waitForNavigation({ waitUntil: 'load' });
         } else {
             if (missingFood > 0) {
-            console.log(`- Bekészítettem neked ${missingFood} a kaját!`);
+            console.log(`- Bekészítettem neked ${missingFood} kaját!`);
             } else {
                 console.log("Nem volt étvágyad? Tele a tálad!")
             }
