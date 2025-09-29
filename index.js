@@ -20,8 +20,8 @@ const randomGuess = process.env.RANDOM_UPTO;
 
     await page.waitForNavigation();
 
-    console.log(`- Szia, ${username}, hogy vagy ma?`)
-    console.log(`- Szia, kis gazdám!!! Most már nagyon jól, úgy örülök neked!`)
+    console.log(`- Szia, ${username}, jól aludtál? Hogy vagy ma?`)
+    console.log(`- Szia, kis gazdám!!! Jól aludtam, nagyon hiányoztál, most már nagyon jól vagyok, úgy örülök neked!`)
 
     let missingFood = 0;
 
